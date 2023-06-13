@@ -1,0 +1,20 @@
+
+<%- include("partials/header") -%>
+
+<h1>Home</h1>
+<p><%=homeStart%></p>
+
+<% homeContent.forEach(function(element) { %>
+    <h2><%=element.title%></h2>
+    
+    <div style="display: flex; justify-content:flex-start;">
+        <p><%=element.text.substring(0,100)+"..."%></p>
+        <p>
+            <a href="http://localhost:3000/posts/<%=element._id%>">Read More</a>
+        </p>
+    </div>
+    
+ <% }); %>
+
+<%- include("partials/footer") -%>
+
